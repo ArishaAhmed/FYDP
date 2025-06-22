@@ -1,0 +1,269 @@
+/* === GLOBAL RESET === */
+* {
+  box-sizing: border-box;
+  /* margin: 0;
+  padding: 0; */
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+/* === CONTAINER LAYOUT === */
+.dashboard-container {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  background-color: black;
+  color: white;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.logoss {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+     font-style: italic;
+    font-family: 'Playfair Display', serif; 
+}
+
+.logoss span {
+  margin-left: 8px;
+}
+
+.nav-button {
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: white; /* Makes the text color white */
+  border: none;
+  width: 100%;
+  background: linear-gradient(140deg, rgb(125, 125, 130), #908b90, rgb(106, 107, 112)); /* Gradient background */
+  font-weight: bold;
+}
+
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile-icon {
+  width: 32px;
+  height: 25px;
+  background-color: #aaa;
+  mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><circle cx='256' cy='176' r='96' fill='white'/><path d='M128 384c0-70.7 57.3-128 128-128s128 57.3 128 128v16H128v-16z' fill='white'/></svg>") no-repeat center;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'><circle cx='256' cy='176' r='96' fill='white'/><path d='M128 384c0-70.7 57.3-128 128-128s128 57.3 128 128v16H128v-16z' fill='white'/></svg>") no-repeat center;
+  mask-size: contain;
+  -webkit-mask-size: contain;
+}
+
+
+
+/* === MAIN DASHBOARD AREA === */
+.dashboard-main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+/* === DASHBOARD TITLE === */
+.dashboard-title {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  color: black;
+}
+
+/* === BOT GRID === */
+.bot-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* === CARD STYLES (Bot + Create) === */
+.bot-card,
+.create-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  position: relative;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 200px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+
+}
+.bot-card:hover {
+  transform: scale(1.03);
+}
+
+/* === AVATAR === */
+.bot-avatar {
+  width: 48px;
+  height: 48px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+
+.bot-name {
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: black;
+}
+
+.bot-updated {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  background-color: #8154f1;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.edit-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(129, 84, 241, 0.4);
+}
+
+
+/* === TRASH ICON === */
+.delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* === CREATE NEW BOT CARD === */
+.create-new {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px; /* Set a height if not already set */
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 20px;
+}
+
+.create-new:hover {
+  transform: scale(1.03);
+}
+
+.create-text {
+  font-weight: 600;
+  margin-top: 10px;
+  color: black;
+}
+
+.create-icon {
+  font-size: 32px;
+  color: #a383f5;
+}
+
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 1024px) {
+  .bot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .bot-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 100px;
+  }
+
+  .nav-button,
+  .profile {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .logo span {
+    display: none;
+  }
+}
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.popup-card h3 {
+  margin-bottom: 16px;
+}
+
+.popup-card button {
+  margin: 8px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #852966;
+  color: white;
+  font-weight: 500;
+}
+
+.popup-card .popup-close {
+  background-color: #ccc;
+  color: #333;
+}
