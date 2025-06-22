@@ -1,0 +1,238 @@
+.navbar {
+    background: linear-gradient(140deg, rgb(83, 79, 131), #e607e6, rgb(101, 115, 241));
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+    box-shadow: inset 2px 4px 26px 20px #00000044;
+    height: 72px;
+    width: 90%;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 10000;
+}
+
+/* Logo section */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Navigation links */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links a {
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: rgb(197, 192, 192);
+    transform: scale(1.08);
+}
+
+/* Auth buttons container */
+.auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.auth-buttons button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Specific styles for login/signup buttons */
+.loginn {
+    background-color: rgba(58, 52, 52, 0.2);
+    border: 1px solid white;
+}
+
+.logout {
+    background-color: rgba(58, 52, 52, 0.2);
+    border: 1px solid white;
+}
+
+
+.signupp {
+    background-color: rgba(12, 69, 145, 0.69);
+    border: 1px solid rgb(227, 236, 248);
+}
+
+.login:hover,
+.signup:hover {
+    transform: scale(1.08);
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    align-items: right;
+}
+
+
+
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #f2f2f2;
+    /* border-radius: 50%; */
+    /* font-size: 100%; Increased from 20px to 48px */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: white;
+}
+
+.initial-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8560e1cc;
+    color: #2d2b2b;
+    font-size: 18px;
+    font-weight: bold;
+    border: white 2px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.initial-button:hover {
+    background-color: #6354a5ee;
+    transform: scale(1.1);
+}
+
+.dropdown-menu {
+    padding-left: 20%;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: rgb(144, 109, 152);
+    box-shadow: 0px 4px 12px rgb(133, 89, 129);
+    border-radius: 8px;
+    z-index: 1000;
+    min-width: 160px;
+    display: flex;
+    flex-direction: column;
+    padding: 6px 0;
+    color: white;
+}
+
+.dropdown-menu button {
+    font-size: 14px;
+    padding-left: 40%;
+    padding: 10px 24px;
+    /* Increased right padding for more space */
+    color: #111;
+    background: none;
+    border: none;
+    text-align: right;
+    cursor: pointer;
+    transition: background-color 0.2s ease, font-size 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+    background-color: transparent;
+    /* Light hover background */
+    font-size: 15.5px;
+    /* Slightly increased on hover */
+}
+
+
+
+
+
+/* Media Query for tablets and mobiles */
+@media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        /* right below navbar */
+        right: 20px;
+        /* align to right side */
+        width: 110px;
+        background-color: rgba(24, 23, 36, 0.95);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        padding: 20px;
+        display: none;
+        z-index: 9999;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #00000060;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+}
+
+/* Large screens */
+@media (min-width: 901px) {
+    .mobile-auth {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+    }
+
+    .auth-buttons {
+        flex-direction: row;
+    }
+}

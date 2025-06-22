@@ -1,0 +1,229 @@
+ body {
+   background: black;
+   /* display: flex; */
+   /* align-items: center; */
+   min-height: 100vh;
+   margin: 0;
+   overflow: auto;
+   font-family: Arial, sans-serif;
+   color: white;
+   position: relative;
+   width: 100%;
+   max-width: 1600px;
+ }
+
+ .chatbottt-creator-container {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   padding: 5rem 1rem;
+   text-align: center;
+   min-height: 100vh;
+   width: 100%;
+   margin-top: 0;
+
+ }
+
+ .chatbottt-content {
+   background-color: #342134;
+   padding: 3rem 2rem;
+   border-radius: 12px;
+   box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+   max-width: 700px;
+   width: 100%;
+   text-align: center;
+ }
+
+ .chatbot-content h2 {
+   margin-bottom: 2rem;
+   font-size: 1.8rem;
+   color: #fff;
+ }
+
+ .instruction-block {
+   margin-top: 2rem;
+   text-align: left;
+ }
+
+ .instruction-block h3 {
+   font-size: 1.2rem;
+   color: #eee;
+   margin-bottom: 5rem;
+ }
+
+
+ .url-container {
+
+   color: white;
+   min-height: 100vh;
+   width: 190%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
+ .code-section {
+   padding: 4rem 2rem;
+   text-align: center;
+   z-index: 1;
+   width: 100%;
+   margin-top: 7%;
+   margin-bottom: 5%;
+ }
+
+ .code-heading {
+   font-size: 1.4rem;
+   margin-bottom: 2rem;
+   font-weight: 600;
+   color: white;
+ }
+
+ .code-block {
+   background-color: #704168;
+   border-radius: 10px;
+   box-shadow: 0 0 8px white;
+   padding: 1rem;
+   width: 90%;
+   max-width: 700px;
+   margin: 0 auto;
+   text-align: left;
+ }
+
+ .code-header {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color: #cfcfcf;
+   font-size: 0.9rem;
+   margin-bottom: 1rem;
+ }
+
+ .lang-label {
+   background-color: #444;
+   padding: 0.25rem 0.6rem;
+   border-radius: 6px;
+ }
+
+ .copy-btn {
+   background: transparent;
+   color: #bbb;
+   border: none;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   gap: 0.3rem;
+   font-size: 0.9rem;
+   transition: color 0.3s;
+ }
+
+ .copy-btn:hover {
+   color: #fff;
+ }
+
+ .code-content {
+   color: #dcdcdc;
+   font-size: 0.85rem;
+   white-space: pre-wrap;
+   font-family: "Courier New", monospace;
+   line-height: 1.5;
+ }
+
+ /* Floating Diamond Background */
+
+ .diamond-container,
+ .diamond-container-two {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow: hidden;
+   z-index: -1;
+ }
+
+ /* Diamond Styling */
+ .diamond {
+   position: absolute;
+   background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+   transform: rotate(45deg);
+   filter: blur(8px);
+   animation: floatAnimation 10s infinite alternate ease-in-out;
+   z-index: 10;
+ }
+
+ /* Floating Animation */
+ @keyframes floatAnimation {
+   0% {
+     transform: rotate(45deg) translateY(0);
+   }
+
+   50% {
+     transform: rotate(45deg) translateY(-150px);
+   }
+
+   100% {
+     transform: rotate(45deg) translateY(70px);
+   }
+ }
+
+ /* Diamond Colors */
+ .pink,
+ .pink-two {
+   background: radial-gradient(circle, rgba(255, 20, 147, 0.8), rgba(255, 20, 147, 0.8));
+   box-shadow: 0 0 10px 20px rgba(255, 20, 147, 0.8);
+ }
+
+ .purple,
+ .purple-two {
+   background: radial-gradient(circle, rgba(138, 43, 226, 0.8), rgba(138, 43, 226, 0.8));
+   box-shadow: 0 0 10px 20px rgba(138, 43, 226, 0.8);
+ }
+
+ .blue,
+ .blue-two {
+   background: radial-gradient(circle, rgba(0, 206, 209, 0.8), rgba(0, 206, 209, 0.8));
+   box-shadow: 0 0 10px 20px rgba(0, 206, 209, 0.8);
+ }
+
+ /* Diamond Positions */
+ .pink {
+   top: 15%;
+   left: 5%;
+   width: 40px;
+   height: 40px;
+ }
+
+ .purple {
+   top: 27%;
+   left: 12%;
+   width: 31px;
+   height: 31px;
+ }
+
+ .blue {
+   top: 41%;
+   left: 5%;
+   width: 53px;
+   height: 53px;
+ }
+
+ .pink-two {
+   top: 79%;
+   right: 10%;
+   width: 40px;
+   height: 40px;
+ }
+
+ .purple-two {
+   top: 87%;
+   right: 18%;
+   width: 31px;
+   height: 31px;
+ }
+
+ .blue-two {
+   top: 60%;
+   right: 14%;
+   width: 53px;
+   height: 53px;
+ }
