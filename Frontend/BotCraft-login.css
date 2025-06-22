@@ -1,0 +1,219 @@
+.login-container {
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: 40%;
+    margin-top: 3%;
+
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-bottom: 20px;
+    padding-left: 155px;
+
+}
+
+.header-container .logo {
+    padding-left: 18px;
+    height: 10%;
+    width: 10%;
+    /* Add any additional styles here */
+}
+
+/* 
+.logo {
+    width: 50px;
+} */
+
+.heading {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    color: white;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+}
+
+.cards {
+    background: hsla(0, 16%, 96%, 0.993);
+    padding: 10px;
+    border-radius: 15px;
+    width: 400px;
+    min-height: 65vh;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0px 4px 15px rgb(107, 103, 103);
+    color: black;
+}
+
+.welcome {
+    font-size: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 5px;
+}
+
+.google-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    font-weight: bold;
+    background: linear-gradient(45deg, #f1eeed, #faf8f8);
+    color: rgb(0, 0, 0);
+}
+
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    background: linear-gradient(45deg, #388cec, #610b61);
+    color: rgb(235, 212, 212);
+    font-weight: bold;
+}
+
+.google-btn:hover,
+.login-btn:hover {
+    opacity: 0.85;
+    transition: 0.3s ease-in-out;
+}
+
+.terms-text {
+    font-size: 11px;
+    margin-top: 20px;
+    color: gray;
+}
+
+
+.diamond-container,
+.diamond-container-two {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+.diamond {
+    position: absolute;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    transform: rotate(45deg);
+    filter: blur(8px);
+    animation: floatAnimation 10s infinite alternate ease-in-out;
+    z-index: 10;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: rotate(45deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(45deg) translateY(-150px);
+    }
+
+    100% {
+        transform: rotate(45deg) translateY(70px);
+    }
+}
+
+
+
+.pink,
+.pink-two {
+    background: radial-gradient(circle, rgba(255, 20, 147, 0.8), rgba(255, 20, 147, 0.8));
+    box-shadow: 0 0 10px 20px rgba(255, 20, 147, 0.8);
+}
+
+.purple,
+.purple-two {
+    background: radial-gradient(circle, rgba(138, 43, 226, 0.8), rgba(138, 43, 226, 0.8));
+    box-shadow: 0 0 10px 20px rgba(138, 43, 226, 0.8);
+}
+
+.blue,
+.blue-two {
+    background: radial-gradient(circle, rgba(0, 206, 209, 0.8), rgba(0, 206, 209, 0.8));
+    box-shadow: 0 0 10px 20px rgba(0, 206, 209, 0.8);
+}
+
+.pink {
+    top: 15%;
+    left: 5%;
+    width: 40px;
+    height: 40px;
+}
+
+.purple {
+    top: 27%;
+    left: 12%;
+    width: 31px;
+    height: 31px;
+}
+
+.blue {
+    top: 41%;
+    left: 5%;
+    width: 53px;
+    height: 53px;
+}
+
+.pink-two {
+    top: 79%;
+    right: 10%;
+    width: 40px;
+    height: 40px;
+}
+
+.purple-two {
+    top: 87%;
+    right: 18%;
+    width: 31px;
+    height: 31px;
+}
+
+.blue-two {
+    top: 60%;
+    right: 14%;
+    width: 53px;
+    height: 53px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 250px;
+        height: 480px;
+    }
+
+    .diamond {
+        width: 30px !important;
+        height: 30px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 220px;
+        height: 500px;
+    }
+
+    .diamond {
+        width: 20px !important;
+        height: 20px !important;
+    }
+}
